@@ -1,0 +1,13 @@
+extends layout
+
+block content
+
+  h1= item.name
+
+  br
+  br
+  p Description: #{item.description} 
+  p Category: #{item.category.name}
+  p Price: #{item.price}
+  p Number in Stock: #{item.stock}
+

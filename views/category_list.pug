@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to Cheap As Chimps Inventory Management.
+
+  p Our Product Categories Are:
+
+  ul
+    each category in category_list
+        li 
+          a(href=category.url) #{category.name}
+          |  (#{category.description})
+
+    else 
+      li No Categories Found.

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= category.name
+
+  ul
+    if category_items.length
+      each item in category_items
+        li 
+          a(href=item.url) #{item.name}
+    else 
+      li No Items Associated with #{category}.
